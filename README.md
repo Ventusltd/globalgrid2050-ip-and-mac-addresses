@@ -16,6 +16,7 @@ Website: https://ventusltd.github.io/globalgrid2050-ip-and-mac-addresses/
 - Static QR labels encode that address. Their white scanning area stays still; only the surrounding frame animates, with pause and reduced-motion support.
 - Append-only registration, update and retirement events. Retirement retains the ID. Previous published event history is compared during push/PR validation.
 - Three explicit demonstration records: a solar panel, a cable and a transformer. No real equipment is being tracked by these examples.
+- A generated identity index for a future Kuiper reader: `data/kuiper-index.json`. See [inspection handoff](docs/KUIPER-INSPECTION-LINKS.md); no EL instrument or Kuiper reader is connected yet.
 
 ## Run and maintain
 
