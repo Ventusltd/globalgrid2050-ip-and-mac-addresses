@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find a GlobalGrid asset by its permanent identity and open its linked record.">
+  <title>GlobalGrid2050 · Identity registry</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./">GLOBALGRID2050 <span>/ IDENTITY REGISTRY</span></a>
+    <h1>One identity.<br>A record you can find.</h1>
+    <p class="intro">Search a title, permanent ID or barcode number. Select an entry to open its record or scan its label.</p>
+  </header>
+  <main>
+    <section class="search-panel" aria-label="Find a record">
+      <label for="registrySearch">Find an identity</label>
+      <input id="registrySearch" type="search" placeholder="Title, UUID or barcode number…" autocomplete="off" spellcheck="false" disabled>
+      <p id="searchStatus" class="muted small" role="status">Loading registry…</p>
+    </section>
+    <div class="workspace">
+      <section class="directory" aria-labelledby="directoryHeading">
+        <h2 id="directoryHeading">Registered identities</h2>
+        <ul id="recordList" class="record-list"></ul>
+        <p id="emptyResults" class="muted" hidden>No identities match this search.</p>
+      </section>
+      <section id="recordPanel" class="record-panel" aria-labelledby="recordHeading" aria-live="polite">
+        <h2 id="recordHeading">Choose a record</h2>
+        <p class="muted">Select an identity from the list, or follow a scanned label to its permanent address.</p>
+      </section>
+    </div>
+    <noscript><p class="notice">JavaScript is required to search and resolve identities. You can inspect the <a href="data/registry.json">registry file</a> directly.</p></noscript>
+  </main>
+  <footer>
+    <p>UUIDs identify records. They are not network IP addresses or hardware MAC addresses.</p>
+    <p>Demonstration entries are labelled. Linked records open only when you choose their link.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+__pycache__/
+.tools/
+node_modules/
+_site/
+previous-registry.json
